@@ -62,7 +62,7 @@ const About = () => {
                 </div>
               </div>
               <div className="flex justify-center">
-                <div className="w-64 h-64 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
+                <div className="w-64 h-64 bg-muted rounded-full flex items-center justify-center">
                   <span className="text-6xl">👨‍💻</span>
                 </div>
               </div>
@@ -79,7 +79,7 @@ const About = () => {
                 <Badge
                   key={index}
                   variant="secondary"
-                  className="px-4 py-2 text-sm font-medium hover:bg-primary/10 hover:text-primary transition-colors cursor-default"
+                  className="px-4 py-2 text-sm font-medium hover:bg-muted transition-colors cursor-default"
                 >
                   {skill}
                 </Badge>
@@ -95,12 +95,12 @@ const About = () => {
             {achievements.map((achievement, index) => (
               <Card key={index} className="project-card text-center">
                 <div className="space-y-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mx-auto">
-                    <span className="text-white font-bold">🏆</span>
-                  </div>
+                <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto">
+                  <span className="text-2xl">🏆</span>
+                </div>
                   <div className="space-y-2">
                     <h3 className="font-semibold text-lg">{achievement.title}</h3>
-                    <p className="text-primary font-medium">{achievement.year}</p>
+                    <p className="text-muted-foreground font-medium">{achievement.year}</p>
                     <p className="text-muted-foreground text-sm">
                       {achievement.description}
                     </p>

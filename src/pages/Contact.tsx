@@ -153,7 +153,7 @@ const Contact = () => {
 
                 <Button 
                   type="submit" 
-                  className="w-full hero-button"
+                  className="w-full bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-4"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
@@ -185,8 +185,8 @@ const Contact = () => {
                       href={info.href}
                       className="flex items-center space-x-4 p-3 rounded-lg hover:bg-muted/50 transition-colors group"
                     >
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                        <info.icon className="h-5 w-5 text-primary" />
+                      <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center group-hover:bg-accent/10 transition-colors">
+                        <info.icon className="h-5 w-5 text-foreground" />
                       </div>
                       <div>
                         <p className="font-medium">{info.label}</p>
@@ -209,7 +209,7 @@ const Contact = () => {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
+                      className="w-12 h-12 bg-muted rounded-full flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
                       aria-label={social.label}
                     >
                       <social.icon className="h-5 w-5" />
@@ -235,7 +235,7 @@ const Contact = () => {
                     <span className="text-muted-foreground">Project Availability:</span>
                     <div className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="font-medium text-accent">Available</span>
+                    <span className="font-medium text-accent">Available</span>
                     </div>
                   </div>
                   <div className="flex justify-between items-center">

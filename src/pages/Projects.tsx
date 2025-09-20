@@ -89,7 +89,7 @@ const Projects = () => {
               <Card key={project.id} className="project-card overflow-hidden">
                 <div className="space-y-6">
                   {/* Project Image/Icon */}
-                  <div className="h-48 bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-xl flex items-center justify-center">
+                  <div className="h-48 bg-muted rounded-t-xl flex items-center justify-center">
                     <span className="text-6xl">{project.image}</span>
                   </div>
                   
@@ -181,7 +181,7 @@ const Projects = () => {
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             I'm always open to discussing new projects and opportunities. Let's create something amazing together!
           </p>
-          <Button size="lg" className="hero-button">
+          <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-4">
             <a href="/contact">Get In Touch</a>
           </Button>
         </section>

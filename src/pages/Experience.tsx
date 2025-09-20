@@ -93,7 +93,7 @@ const Experience = () => {
                   {/* Timeline Dot */}
                   <div className={`absolute left-6 w-4 h-4 rounded-full border-4 ${
                     exp.current 
-                      ? 'bg-primary border-primary' 
+                      ? 'bg-accent border-accent' 
                       : 'bg-background border-border'
                   }`}></div>
                   
@@ -106,7 +106,7 @@ const Experience = () => {
                           <div className="flex flex-wrap items-start justify-between gap-2">
                             <div>
                               <h3 className="text-xl font-bold">{exp.position}</h3>
-                              <p className="text-lg font-semibold text-primary">{exp.company}</p>
+                              <p className="text-lg font-semibold text-accent">{exp.company}</p>
                             </div>
                             {exp.current && (
                               <Badge className="bg-accent text-accent-foreground">
@@ -135,7 +135,7 @@ const Experience = () => {
                           <ul className="space-y-2">
                             {exp.description.map((item, idx) => (
                               <li key={idx} className="flex items-start gap-2 text-muted-foreground">
-                                <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0"></span>
+                                <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0"></span>
                                 <span>{item}</span>
                               </li>
                             ))}
@@ -167,7 +167,7 @@ const Experience = () => {
           <h2 className="text-3xl font-bold text-center">Core Competencies</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card className="p-6 text-center space-y-4">
-              <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mx-auto">
+              <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto">
                 <span className="text-2xl">🚀</span>
               </div>
               <h3 className="font-semibold text-lg">Full-Stack Development</h3>
@@ -177,7 +177,7 @@ const Experience = () => {
             </Card>
 
             <Card className="p-6 text-center space-y-4">
-              <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mx-auto">
+              <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto">
                 <span className="text-2xl">👥</span>
               </div>
               <h3 className="font-semibold text-lg">Team Leadership</h3>
@@ -187,7 +187,7 @@ const Experience = () => {
             </Card>
 
             <Card className="p-6 text-center space-y-4">
-              <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mx-auto">
+              <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto">
                 <span className="text-2xl">⚡</span>
               </div>
               <h3 className="font-semibold text-lg">Performance Optimization</h3>

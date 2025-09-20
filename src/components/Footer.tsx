@@ -51,7 +51,7 @@ const Footer = () => {
                   variant="ghost"
                   size="sm"
                   asChild
-                  className="hover:bg-primary/10 hover:text-primary"
+                  className="hover:bg-muted hover:text-foreground"
                 >
                   <a 
                     href={social.href} 
