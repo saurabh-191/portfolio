@@ -3,69 +3,72 @@ import { Badge } from '@/components/ui/badge';
 import { Calendar, MapPin } from 'lucide-react';
 
 const Experience = () => {
+  const education = [
+    {
+      id: 1,
+      institution: 'Indian Institute of Technology (IIT)',
+      degree: 'Bachelor of Technology (B.Tech)',
+      field: 'Computer Science and Engineering',
+      location: 'Delhi, India',
+      duration: '2019 - 2023',
+      grade: 'CGPA: 8.7/10',
+      description: [
+        'Specialized in Software Engineering and Data Structures & Algorithms',
+        'Active member of Coding Club and participated in various hackathons',
+        'Completed coursework in Web Development, Database Systems, and Machine Learning',
+        'Final year project on "Real-time Web Application Development using MERN Stack"'
+      ],
+      achievements: ['Dean\'s List', 'Best Project Award', 'Technical Society Leader']
+    }
+  ];
+
   const experiences = [
     {
       id: 1,
-      company: 'TechCorp Solutions',
-      position: 'Senior Full-Stack Developer',
-      location: 'San Francisco, CA',
-      duration: 'Jan 2022 - Present',
+      company: 'TechInnovate Solutions',
+      position: 'Full-Stack Developer',
+      location: 'Bangalore, India',
+      duration: 'Jul 2023 - Present',
       type: 'Full-time',
       description: [
-        'Led development of a microservices architecture serving 100K+ daily active users',
-        'Implemented CI/CD pipelines reducing deployment time by 70%',
-        'Mentored 5 junior developers and conducted technical interviews',
-        'Built responsive web applications using React, TypeScript, and Node.js'
+        'Developed and maintained scalable web applications serving 50K+ users',
+        'Implemented responsive designs using React.js and modern CSS frameworks',
+        'Built RESTful APIs with Node.js and integrated with MongoDB databases',
+        'Collaborated with cross-functional teams to deliver high-quality products'
       ],
-      technologies: ['React', 'TypeScript', 'Node.js', 'AWS', 'Docker', 'PostgreSQL'],
+      technologies: ['React', 'Node.js', 'MongoDB', 'JavaScript', 'TailwindCSS', 'Git'],
       current: true
     },
     {
       id: 2,
-      company: 'StartupXYZ',
-      position: 'Full-Stack Developer',
-      location: 'Remote',
-      duration: 'Jun 2020 - Dec 2021',
-      type: 'Full-time',
+      company: 'WebCraft Digital',
+      position: 'Frontend Developer Intern',
+      location: 'Mumbai, India',
+      duration: 'Jan 2023 - Jun 2023',
+      type: 'Internship',
       description: [
-        'Developed MVP from scratch using React and Express.js',
-        'Designed and implemented RESTful APIs serving mobile and web clients',
-        'Optimized database queries improving response time by 50%',
-        'Collaborated with design team to implement pixel-perfect UI components'
+        'Assisted in developing user-friendly web interfaces using React and JavaScript',
+        'Collaborated with senior developers to implement responsive design patterns',
+        'Participated in code reviews and learned best practices for clean code',
+        'Contributed to improving website performance and user experience'
       ],
-      technologies: ['React', 'Express.js', 'MongoDB', 'Socket.io', 'TailwindCSS'],
+      technologies: ['React', 'JavaScript', 'HTML', 'CSS', 'Bootstrap'],
       current: false
     },
     {
       id: 3,
-      company: 'Digital Agency Pro',
-      position: 'Frontend Developer',
-      location: 'New York, NY',
-      duration: 'Sep 2019 - May 2020',
-      type: 'Full-time',
-      description: [
-        'Built responsive websites for 20+ clients using modern web technologies',
-        'Collaborated with UX/UI designers to implement interactive user interfaces',
-        'Optimized website performance achieving 95+ Lighthouse scores',
-        'Integrated third-party APIs and payment systems'
-      ],
-      technologies: ['React', 'Vue.js', 'SASS', 'Webpack', 'Figma'],
-      current: false
-    },
-    {
-      id: 4,
-      company: 'FreelanceWork',
+      company: 'Freelance Projects',
       position: 'Web Developer',
       location: 'Remote',
-      duration: 'Jan 2019 - Aug 2019',
+      duration: 'Aug 2022 - Dec 2022',
       type: 'Freelance',
       description: [
-        'Developed custom WordPress themes and plugins for small businesses',
-        'Created e-commerce solutions using WooCommerce and Shopify',
-        'Provided ongoing maintenance and support for client websites',
-        'Managed multiple projects simultaneously with tight deadlines'
+        'Developed custom websites for local businesses and startups',
+        'Created responsive landing pages with modern design principles',
+        'Implemented contact forms and basic e-commerce functionality',
+        'Provided ongoing support and maintenance for client projects'
       ],
-      technologies: ['WordPress', 'PHP', 'JavaScript', 'MySQL', 'Shopify'],
+      technologies: ['HTML', 'CSS', 'JavaScript', 'WordPress', 'PHP'],
       current: false
     }
   ];
@@ -75,14 +78,82 @@ const Experience = () => {
       <div className="max-w-4xl mx-auto space-y-16">
         {/* Header */}
         <div className="text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold">Experience</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">Education & Experience</h1>
           <p className="text-xl text-muted-foreground">
-            My professional journey in software development
+            My academic background and professional journey in software development
           </p>
         </div>
 
-        {/* Timeline */}
+        {/* Education Section */}
         <section className="space-y-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold">Education</h2>
+            <div className="w-20 h-1 bg-accent mx-auto mt-4"></div>
+          </div>
+          
+          <div className="space-y-8">
+            {education.map((edu) => (
+              <div key={edu.id} className="max-w-3xl mx-auto">
+                <Card className="project-card">
+                  <div className="p-6 space-y-4">
+                    {/* Header */}
+                    <div className="space-y-2 text-center">
+                      <h3 className="text-2xl font-bold">{edu.degree}</h3>
+                      <p className="text-lg font-semibold text-accent">{edu.field}</p>
+                      <p className="text-lg font-medium">{edu.institution}</p>
+                      
+                      <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
+                        <div className="flex items-center gap-1">
+                          <Calendar className="h-4 w-4" />
+                          <span>{edu.duration}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <MapPin className="h-4 w-4" />
+                          <span>{edu.location}</span>
+                        </div>
+                        <Badge variant="outline" className="text-xs">
+                          {edu.grade}
+                        </Badge>
+                      </div>
+                    </div>
+
+                    {/* Description */}
+                    <div className="space-y-2">
+                      <ul className="space-y-2">
+                        {edu.description.map((item, idx) => (
+                          <li key={idx} className="flex items-start gap-2 text-muted-foreground">
+                            <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0"></span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Achievements */}
+                    <div className="space-y-2">
+                      <p className="text-sm font-medium">Key Achievements:</p>
+                      <div className="flex flex-wrap gap-2">
+                        {edu.achievements.map((achievement, idx) => (
+                          <Badge key={idx} variant="secondary" className="text-xs">
+                            {achievement}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Work Experience Section */}
+        <section className="space-y-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold">Work Experience</h2>
+            <div className="w-20 h-1 bg-accent mx-auto mt-4"></div>
+          </div>
+          
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border"></div>
