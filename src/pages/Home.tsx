@@ -14,7 +14,7 @@ const Home = () => {
           <div className="space-y-4 animate-fade-in">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
               Hi, I'm{' '}
-              <span className="gradient-text">Alex Johnson</span>
+              <span className="gradient-text">Saurabh Singh</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
               Full-Stack Developer & UI/UX Designer crafting beautiful digital experiences
