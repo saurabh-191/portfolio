@@ -3,17 +3,21 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from './ThemeToggle';
+import LanguageToggle from './LanguageToggle';
+import { useTranslation } from 'react-i18next';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Experience', path: '/experience' },
-    { name: 'Contact', path: '/contact' },
+    { name: t('navigation.home'), path: '/' },
+    { name: t('navigation.about'), path: '/about' },
+    { name: t('navigation.projects'), path: '/projects' },
+    { name: t('navigation.experience'), path: '/experience' },
+    { name: t('navigation.blog'), path: '/blog' },
+    { name: t('navigation.contact'), path: '/contact' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -42,12 +46,16 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <ThemeToggle />
+            <div className="flex items-center space-x-2">
+              <ThemeToggle />
+              <LanguageToggle />
+            </div>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             <ThemeToggle />
+            <LanguageToggle />
             <Button
               variant="ghost"
               size="sm"

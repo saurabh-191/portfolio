@@ -2,8 +2,11 @@ import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -13,24 +16,23 @@ const Home = () => {
         <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-4 animate-fade-in">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
-              Hi, I'm{' '}
-              <span className="gradient-text">Saurabh Singh</span>
+              {t('home.title')}
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-              Full-Stack Developer & UI/UX Designer crafting beautiful digital experiences
+              {t('home.subtitle')}
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
             <Link to="/projects">
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-4 group">
-                View My Work
+                {t('home.viewWork')}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Link to="/contact">
               <Button variant="outline" size="lg" className="px-8 py-4 border-2">
-                Get In Touch
+                {t('home.getInTouch')}
               </Button>
             </Link>
           </div>
@@ -67,9 +69,9 @@ const Home = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">What I Do</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('home.whatIDo')}</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              I specialize in creating modern, responsive web applications with clean code and beautiful design.
+              {t('home.description')}
             </p>
           </div>
 
@@ -79,9 +81,9 @@ const Home = () => {
                 <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto">
                   <span className="text-2xl">🎨</span>
                 </div>
-                <h3 className="text-xl font-semibold">UI/UX Design</h3>
+                <h3 className="text-xl font-semibold">{t('home.uiDesign')}</h3>
                 <p className="text-muted-foreground">
-                  Creating intuitive and visually appealing user interfaces with modern design principles.
+                  {t('home.uiDesignDesc')}
                 </p>
               </div>
             </Card>
@@ -91,9 +93,9 @@ const Home = () => {
                 <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto">
                   <span className="text-2xl">💻</span>
                 </div>
-                <h3 className="text-xl font-semibold">Frontend Development</h3>
+                <h3 className="text-xl font-semibold">{t('home.frontendDev')}</h3>
                 <p className="text-muted-foreground">
-                  Building responsive web applications using React, TypeScript, and modern CSS frameworks.
+                  {t('home.frontendDevDesc')}
                 </p>
               </div>
             </Card>
@@ -103,9 +105,9 @@ const Home = () => {
                 <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto">
                   <span className="text-2xl">⚡</span>
                 </div>
-                <h3 className="text-xl font-semibold">Backend Development</h3>
+                <h3 className="text-xl font-semibold">{t('home.backendDev')}</h3>
                 <p className="text-muted-foreground">
-                  Developing robust APIs and server-side applications with Node.js, Python, and databases.
+                  {t('home.backendDevDesc')}
                 </p>
               </div>
             </Card>

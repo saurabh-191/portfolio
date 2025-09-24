@@ -1,0 +1,68 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "home": {
+    "title": "Hola, soy Saurabh Singh",
+    "subtitle": "Desarrollador Full-Stack y Diseñador UI/UX creando experiencias digitales hermosas",
+    "viewWork": "Ver Mi Trabajo",
+    "getInTouch": "Contáctame",
+    "whatIDo": "Lo Que Hago",
+    "description": "Me especializo en crear aplicaciones web modernas y responsivas con código limpio y diseño hermoso.",
+    "uiDesign": "Diseño UI/UX",
+    "uiDesignDesc": "Creando interfaces de usuario intuitivas y visualmente atractivas con principios de diseño modernos.",
+    "frontendDev": "Desarrollo Frontend",
+    "frontendDevDesc": "Construyendo aplicaciones web responsivas usando React, TypeScript y frameworks CSS modernos.",
+    "backendDev": "Desarrollo Backend",
+    "backendDevDesc": "Desarrollando APIs robustas y aplicaciones del lado del servidor con Node.js, Python y bases de datos."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Artículos, tutoriales e insights sobre desarrollo web",
+    "searchPlaceholder": "Buscar artículos...",
+    "allCategories": "Todas las Categorías",
+    "noResults": "No se encontraron artículos que coincidan con tus criterios de búsqueda.",
+    "readMore": "Leer Más",
+    "backToBlog": "← Volver al Blog",
+    "relatedPosts": "Publicaciones Relacionadas",
+    "shareArticle": "Compartir Artículo",
+    "categories": "Categorías",
+    "tags": "Etiquetas",
+    "publishedOn": "Publicado el",
+    "readingTime": "{{minutes}} min de lectura"
+  },
+  "about": {
+    "title": "Acerca de Mí",
+    "subtitle": "Desarrollador Full-Stack apasionado por crear experiencias digitales excepcionales"
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "subtitle": "Una colección de mi trabajo reciente y proyectos personales"
+  },
+  "experience": {
+    "title": "Experiencia y Educación",
+    "subtitle": "Mi trayectoria profesional y formación académica",
+    "education": "Educación",
+    "workExperience": "Experiencia Laboral"
+  },
+  "contact": {
+    "title": "Contáctame",
+    "subtitle": "Hablemos sobre tu próximo proyecto u oportunidad"
+  },
+  "footer": {
+    "copyright": "Todos los derechos reservados.",
+    "quickLinks": "Enlaces Rápidos",
+    "connect": "Conectar",
+    "downloadResume": "Descargar CV"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français"
+  }
+}

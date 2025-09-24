@@ -1,0 +1,68 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Salut, je suis Saurabh Singh",
+    "subtitle": "Développeur Full-Stack et Designer UI/UX créant de belles expériences numériques",
+    "viewWork": "Voir Mon Travail",
+    "getInTouch": "Me Contacter",
+    "whatIDo": "Ce Que Je Fais",
+    "description": "Je me spécialise dans la création d'applications web modernes et responsives avec du code propre et un beau design.",
+    "uiDesign": "Design UI/UX",
+    "uiDesignDesc": "Création d'interfaces utilisateur intuitives et visuellement attrayantes avec des principes de design modernes.",
+    "frontendDev": "Développement Frontend",
+    "frontendDevDesc": "Construction d'applications web responsives utilisant React, TypeScript et des frameworks CSS modernes.",
+    "backendDev": "Développement Backend",
+    "backendDevDesc": "Développement d'APIs robustes et d'applications côté serveur avec Node.js, Python et des bases de données."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Articles, tutoriels et insights sur le développement web",
+    "searchPlaceholder": "Rechercher des articles...",
+    "allCategories": "Toutes les Catégories",
+    "noResults": "Aucun article trouvé correspondant à vos critères de recherche.",
+    "readMore": "Lire Plus",
+    "backToBlog": "← Retour au Blog",
+    "relatedPosts": "Articles Liés",
+    "shareArticle": "Partager l'Article",
+    "categories": "Catégories",
+    "tags": "Tags",
+    "publishedOn": "Publié le",
+    "readingTime": "{{minutes}} min de lecture"
+  },
+  "about": {
+    "title": "À Propos de Moi",
+    "subtitle": "Développeur Full-Stack passionné par la création d'expériences numériques exceptionnelles"
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "subtitle": "Une collection de mon travail récent et de mes projets personnels"
+  },
+  "experience": {
+    "title": "Expérience et Éducation",
+    "subtitle": "Mon parcours professionnel et ma formation académique",
+    "education": "Éducation",
+    "workExperience": "Expérience Professionnelle"
+  },
+  "contact": {
+    "title": "Me Contacter",
+    "subtitle": "Discutons de votre prochain projet ou opportunité"
+  },
+  "footer": {
+    "copyright": "Tous droits réservés.",
+    "quickLinks": "Liens Rapides",
+    "connect": "Se Connecter",
+    "downloadResume": "Télécharger CV"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français"
+  }
+}

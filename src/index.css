@@ -127,6 +127,40 @@
   .timeline-item {
     @apply relative pl-6 border-l-2 border-border hover:border-muted-foreground transition-colors duration-300;
   }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .article-content h1 {
+    @apply text-3xl font-bold mb-6 mt-8;
+  }
+
+  .article-content h2 {
+    @apply text-2xl font-semibold mb-4 mt-6;
+  }
+
+  .article-content p {
+    @apply mb-4 leading-relaxed;
+  }
+
+  .article-content pre {
+    @apply bg-muted p-4 rounded-lg overflow-x-auto mb-4;
+  }
+
+  .article-content code {
+    @apply bg-muted px-1 py-0.5 rounded text-sm;
+  }
 }
 
 @layer base {
