@@ -38,11 +38,11 @@ const About = () => {
 
         {/* Personal Story */}
         <section className="space-y-8">
-          <Card className="p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="space-y-6">
-                <h2 className="text-3xl font-bold">My Story</h2>
-                <div className="space-y-4 text-muted-foreground">
+          <div className="project-card">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <h2 className="text-4xl font-black gradient-text">My Story</h2>
+                <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
                   <p>
                     I'm a passionate full-stack developer with over 5 years of experience 
                     creating digital solutions that make a difference. My journey started 
@@ -62,30 +62,33 @@ const About = () => {
                 </div>
               </div>
               <div className="flex justify-center">
-                <div className="w-64 h-64 bg-muted rounded-full flex items-center justify-center">
-                  <span className="text-6xl">👨‍💻</span>
+                <div className="relative">
+                  <div className="w-80 h-80 glow-effect glass-card rounded-full flex items-center justify-center border-2 border-primary/30 group-hover:border-primary/60">
+                    <span className="text-8xl">👨‍💻</span>
+                  </div>
+                  <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 blur-3xl -z-10 rounded-full animate-pulse" />
                 </div>
               </div>
             </div>
-          </Card>
+          </div>
         </section>
 
         {/* Skills */}
-        <section className="space-y-8">
-          <h2 className="text-3xl font-bold text-center">Skills & Technologies</h2>
-          <Card className="p-8">
-            <div className="flex flex-wrap justify-center gap-3">
+        <section className="space-y-12">
+          <h2 className="text-4xl font-black text-center gradient-text">Skills & Technologies</h2>
+          <div className="project-card">
+            <div className="flex flex-wrap justify-center gap-4">
               {skills.map((skill, index) => (
-                <Badge
+                <span
                   key={index}
-                  variant="secondary"
-                  className="px-4 py-2 text-sm font-medium hover:bg-muted transition-colors cursor-default"
+                  className="skill-badge"
+                  style={{animationDelay: `${index * 0.1}s`}}
                 >
                   {skill}
-                </Badge>
+                </span>
               ))}
             </div>
-          </Card>
+          </div>
         </section>
 
         {/* Achievements */}
