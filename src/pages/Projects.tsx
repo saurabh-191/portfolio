@@ -3,14 +3,25 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
       title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include product management, cart functionality, and secure payments.',
-      image: '🛒',
+      description: '...',
+      // Replace single image with images array
+      images: [
+        { url: '/e-com1.png', alt: 'E-commerce dashboard' },
+        { url: '/e-com2.png', alt: 'Product listing' },
+        { url: '/e-com3.png', alt: 'About' },
+        { url: '/e-com4.png', alt: 'Shopping cart' },
+        { url: '/e-com5.png', alt: 'Checkout' },
+      ],
+      emoji: '🛒', // Keep emoji for smaller cards
       techStack: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'TailwindCSS'],
       githubUrl: 'https://github.com',
       demoUrl: 'https://demo.com',
@@ -20,7 +31,8 @@ const Projects = () => {
       id: 2,
       title: 'Task Management App',
       description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      image: '📋',
+      images: [],
+      emoji: '📋', // Keep emoji for smaller cards
       techStack: ['React', 'TypeScript', 'Socket.io', 'MongoDB'],
       githubUrl: 'https://github.com',
       demoUrl: 'https://demo.com',
@@ -30,7 +42,8 @@ const Projects = () => {
       id: 3,
       title: 'Weather Dashboard',
       description: 'A responsive weather dashboard with location-based forecasts, interactive maps, and historical weather data visualization.',
-      image: '🌤️',
+      images: [],
+      emoji: '🌤️', // Keep emoji for smaller cards
       techStack: ['React', 'Chart.js', 'OpenWeather API', 'CSS Grid'],
       githubUrl: 'https://github.com',
       demoUrl: 'https://demo.com',
@@ -40,7 +53,8 @@ const Projects = () => {
       id: 4,
       title: 'Portfolio Website',
       description: 'A modern, responsive portfolio website built with React and TailwindCSS, featuring smooth animations and dark mode support.',
-      image: '💼',
+      images: [],
+      emoji: '💼', // Keep emoji for smaller cards
       techStack: ['React', 'TailwindCSS', 'Framer Motion', 'Vercel'],
       githubUrl: 'https://github.com',
       demoUrl: 'https://demo.com',
@@ -50,7 +64,8 @@ const Projects = () => {
       id: 5,
       title: 'Blog Platform',
       description: 'A full-featured blog platform with markdown support, user authentication, comments system, and SEO optimization.',
-      image: '📝',
+      images: [],
+      emoji: '📝', // Keep emoji for smaller cards
       techStack: ['Next.js', 'MDX', 'Prisma', 'NextAuth.js'],
       githubUrl: 'https://github.com',
       demoUrl: 'https://demo.com',
@@ -60,7 +75,8 @@ const Projects = () => {
       id: 6,
       title: 'Real-time Chat App',
       description: 'A real-time messaging application with group chats, file sharing, emoji reactions, and push notifications.',
-      image: '💬',
+      images: [],
+      emoji: '💬', // Keep emoji for smaller cards
       techStack: ['React', 'Socket.io', 'Express', 'Redis'],
       githubUrl: 'https://github.com',
       demoUrl: 'https://demo.com',
@@ -76,7 +92,7 @@ const Projects = () => {
       {/* Animated Background */}
       <div className="fixed inset-0 mesh-gradient" />
       <div className="floating-shapes" />
-      
+
       <div className="max-w-8xl mx-auto space-y-20 relative z-10 py-24 px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center space-y-6 fade-in visible">
@@ -94,11 +110,30 @@ const Projects = () => {
               <div key={project.id} className="project-card group overflow-hidden">
                 <div className="space-y-8">
                   {/* Project Image/Icon */}
-                  <div className="relative h-64 glow-effect glass-card rounded-3xl flex items-center justify-center border-2 border-primary/20 group-hover:border-primary/40">
-                    <span className="text-8xl">{project.image}</span>
+                  <div className="relative h-64 glow-effect glass-card rounded-3xl overflow-hidden border-2 border-primary/20 group-hover:border-primary/40">
+                    <Slider
+                      dots={true}
+                      infinite={true}
+                      speed={500}
+                      slidesToShow={1}
+                      slidesToScroll={1}
+                      autoplay={true}
+                      autoplaySpeed={3000}
+                      className="h-full"
+                    >
+                      {project.images.map((image, idx) => (
+                        <div key={idx} className="h-64">
+                          <img
+                            src={image.url}
+                            alt={image.alt}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      ))}
+                    </Slider>
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
-                  
+
                   <div className="space-y-6">
                     <div className="space-y-4">
                       <h3 className="text-3xl font-black group-hover:text-primary transition-colors duration-300">{project.title}</h3>
@@ -111,7 +146,7 @@ const Projects = () => {
                         <span
                           key={techIndex}
                           className="skill-badge text-sm"
-                          style={{animationDelay: `${techIndex * 0.1}s`}}
+                          style={{ animationDelay: `${techIndex * 0.1}s` }}
                         >
                           {tech}
                         </span>
@@ -149,11 +184,11 @@ const Projects = () => {
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
                     <div className="w-16 h-16 glow-effect glass-card rounded-2xl flex items-center justify-center border border-primary/20 group-hover:border-primary/40">
-                      <span className="text-3xl">{project.image}</span>
+                      <span className="text-3xl">{project.emoji}</span>
                     </div>
                     <h3 className="text-xl font-bold group-hover:text-primary transition-colors duration-300">{project.title}</h3>
                   </div>
-                  
+
                   <p className="text-muted-foreground leading-relaxed">{project.description}</p>
 
                   <div className="flex flex-wrap gap-2">
@@ -161,7 +196,7 @@ const Projects = () => {
                       <span
                         key={techIndex}
                         className="skill-badge text-xs"
-                        style={{animationDelay: `${techIndex * 0.1}s`}}
+                        style={{ animationDelay: `${techIndex * 0.1}s` }}
                       >
                         {tech}
                       </span>

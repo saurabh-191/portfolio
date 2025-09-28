@@ -32,7 +32,7 @@ const Home = () => {
             <Link to="/projects" className="group">
               <button className="hero-button group">
                 {t('home.viewWork')}
-                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
+                <ArrowRight className="ml-9 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
               </button>
             </Link>
             <Link to="/contact" className="group">
@@ -49,7 +49,7 @@ const Home = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-8 fade-in visible" style={{animationDelay: '0.6s'}}>
             <a
-              href="https://github.com"
+              href="https://github.com/saurabh-191"
               target="_blank"
               rel="noopener noreferrer"
               className="floating-element glass-card p-4 rounded-2xl group hover:bg-primary/10 border border-primary/20"

@@ -16,7 +16,7 @@ const Navigation = () => {
     { name: t('navigation.about'), path: '/about' },
     { name: t('navigation.projects'), path: '/projects' },
     { name: t('navigation.experience'), path: '/experience' },
-    { name: t('navigation.blog'), path: '/blog' },
+    // { name: t('navigation.blog'), path: '/blog' },
     { name: t('navigation.contact'), path: '/contact' },
   ];
 
@@ -28,7 +28,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-18">
           {/* Logo */}
           <Link to="/" className="font-black text-2xl gradient-text hover:scale-105 transition-transform duration-300">
-            Saurabh Singh
+            Saurabh
           </Link>
 
           {/* Desktop Navigation */}

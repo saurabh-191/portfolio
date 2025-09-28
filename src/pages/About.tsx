@@ -44,20 +44,13 @@ const About = () => {
                 <h2 className="text-4xl font-black gradient-text">My Story</h2>
                 <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
                   <p>
-                    I'm a passionate full-stack developer with over 5 years of experience 
-                    creating digital solutions that make a difference. My journey started 
-                    with a Computer Science degree and evolved through various roles in 
-                    startups and tech companies.
+                    I’m a software engineer with around 3 years of experience of working on multiple projects with client and building web apps and solving real-world problems. My journey began with a Computer Science degree, and since then I’ve worked in tech firm and also worked on different projects and with different tech teams, learn how to turn ideas into working products.
                   </p>
                   <p>
-                    I believe in writing clean, maintainable code and creating user 
-                    experiences that are both beautiful and functional. When I'm not 
-                    coding, you'll find me exploring new technologies, contributing to 
-                    open source, or mentoring aspiring developers.
+                    I focus on writing clean and practical code and have integrating AI to enhance efficiency and quality of my work. Also have a exprerince of working on production level application and solving issue over the application and also have a good knowledge of database and cloud services. Also interacting with client to understand their requirement and their business logic to build project which can solve their problem.
                   </p>
                   <p>
-                    My goal is to bridge the gap between design and development, 
-                    creating products that users love and businesses value.
+                    When I'm not coding, I make sure to spend time with my friends and family and get outdoors to play sports. I also dedicate my leisure time to exploring new tools, frameworks, and the latest AI developments, always looking for better use cases and ways to apply them to my professional projects.
                   </p>
                 </div>
               </div>
@@ -120,8 +113,8 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-2">
               <span className="text-4xl">🎸</span>
-              <p className="font-medium">Music</p>
-              <p className="text-sm text-muted-foreground">Playing guitar in my free time</p>
+              <p className="font-medium">Playing</p>
+              <p className="text-sm text-muted-foreground">Playing Cricket in my free time</p>
             </div>
             <div className="space-y-2">
               <span className="text-4xl">🏃‍♂️</span>

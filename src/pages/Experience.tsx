@@ -6,29 +6,27 @@ const Experience = () => {
   const education = [
     {
       id: 1,
-      institution: 'Indian Institute of Technology (IIT)',
+      institution: 'Swami Vivekanand College of Engineering',
       degree: 'Bachelor of Technology (B.Tech)',
       field: 'Computer Science and Engineering',
-      location: 'Delhi, India',
+      location: 'Indore, India',
       duration: '2019 - 2023',
-      grade: 'CGPA: 8.7/10',
+      grade: 'CGPA: 8.3/10',
       description: [
         'Specialized in Software Engineering and Data Structures & Algorithms',
-        'Active member of Coding Club and participated in various hackathons',
         'Completed coursework in Web Development, Database Systems, and Machine Learning',
-        'Final year project on "Real-time Web Application Development using MERN Stack"'
-      ],
-      achievements: ['Dean\'s List', 'Best Project Award', 'Technical Society Leader']
+        'Final year project on "GYM management system which solve the accounting and management problem of gym using Python stack" and "Drowsiness Detection of Driver using Machine Learning"',
+      ]
     }
   ];
 
   const experiences = [
     {
       id: 1,
-      company: 'TechInnovate Solutions',
+      company: 'Sofmen Technologies Pvt. Ltd.',
       position: 'Full-Stack Developer',
-      location: 'Bangalore, India',
-      duration: 'Jul 2023 - Present',
+      location: 'Indore, India',
+      duration: 'March 2023 - Present',
       type: 'Full-time',
       description: [
         'Developed and maintained scalable web applications serving 50K+ users',
@@ -36,41 +34,41 @@ const Experience = () => {
         'Built RESTful APIs with Node.js and integrated with MongoDB databases',
         'Collaborated with cross-functional teams to deliver high-quality products'
       ],
-      technologies: ['React', 'Node.js', 'MongoDB', 'JavaScript', 'TailwindCSS', 'Git'],
+      technologies: ['JavaScript', 'Gitlab', 'Github', 'Git', 'Laravel', 'MySql', 'Python', 'Docker', 'PostgreSQL', ],
       current: true
     },
-    {
-      id: 2,
-      company: 'WebCraft Digital',
-      position: 'Frontend Developer Intern',
-      location: 'Mumbai, India',
-      duration: 'Jan 2023 - Jun 2023',
-      type: 'Internship',
-      description: [
-        'Assisted in developing user-friendly web interfaces using React and JavaScript',
-        'Collaborated with senior developers to implement responsive design patterns',
-        'Participated in code reviews and learned best practices for clean code',
-        'Contributed to improving website performance and user experience'
-      ],
-      technologies: ['React', 'JavaScript', 'HTML', 'CSS', 'Bootstrap'],
-      current: false
-    },
-    {
-      id: 3,
-      company: 'Freelance Projects',
-      position: 'Web Developer',
-      location: 'Remote',
-      duration: 'Aug 2022 - Dec 2022',
-      type: 'Freelance',
-      description: [
-        'Developed custom websites for local businesses and startups',
-        'Created responsive landing pages with modern design principles',
-        'Implemented contact forms and basic e-commerce functionality',
-        'Provided ongoing support and maintenance for client projects'
-      ],
-      technologies: ['HTML', 'CSS', 'JavaScript', 'WordPress', 'PHP'],
-      current: false
-    }
+    // {
+    //   id: 2,
+    //   company: 'WebCraft Digital',
+    //   position: 'Frontend Developer Intern',
+    //   location: 'Mumbai, India',
+    //   duration: 'Jan 2023 - Jun 2023',
+    //   type: 'Internship',
+    //   description: [
+    //     'Assisted in developing user-friendly web interfaces using React and JavaScript',
+    //     'Collaborated with senior developers to implement responsive design patterns',
+    //     'Participated in code reviews and learned best practices for clean code',
+    //     'Contributed to improving website performance and user experience'
+    //   ],
+    //   technologies: ['React', 'JavaScript', 'HTML', 'CSS', 'Bootstrap'],
+    //   current: false
+    // },
+    // {
+    //   id: 3,
+    //   company: 'Freelance Projects',
+    //   position: 'Web Developer',
+    //   location: 'Remote',
+    //   duration: 'Aug 2022 - Dec 2022',
+    //   type: 'Freelance',
+    //   description: [
+    //     'Developed custom websites for local businesses and startups',
+    //     'Created responsive landing pages with modern design principles',
+    //     'Implemented contact forms and basic e-commerce functionality',
+    //     'Provided ongoing support and maintenance for client projects'
+    //   ],
+    //   technologies: ['HTML', 'CSS', 'JavaScript', 'WordPress', 'PHP'],
+    //   current: false
+    // }
   ];
 
   return (
@@ -127,18 +125,6 @@ const Experience = () => {
                           </li>
                         ))}
                       </ul>
-                    </div>
-
-                    {/* Achievements */}
-                    <div className="space-y-2">
-                      <p className="text-sm font-medium">Key Achievements:</p>
-                      <div className="flex flex-wrap gap-2">
-                        {edu.achievements.map((achievement, idx) => (
-                          <Badge key={idx} variant="secondary" className="text-xs">
-                            {achievement}
-                          </Badge>
-                        ))}
-                      </div>
                     </div>
                   </div>
                 </Card>

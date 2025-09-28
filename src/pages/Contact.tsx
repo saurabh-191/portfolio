@@ -52,25 +52,25 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'alex@example.com',
-      href: 'mailto:alex@example.com'
+      value: 'saurabh.singh.work1806@gmail',
+      href: 'mailto:saurabh.singh.work1806@gmail'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+91 3284432434',
+      href: 'tel:+913284432434'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
-      href: 'https://maps.google.com'
+      value: 'Indore, India',
+      href: 'https://maps.app.goo.gl/gfArmu4K6Wy9BRax8'
     }
   ];
 
   const socialLinks = [
-    { icon: Github, label: 'GitHub', href: 'https://github.com' },
+    { icon: Github, label: 'GitHub', href: 'https://github.com/saurabh-191' },
     { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com' },
     { icon: Twitter, label: 'Twitter', href: 'https://twitter.com' },
   ];
@@ -183,6 +183,8 @@ const Contact = () => {
                     <a
                       key={index}
                       href={info.href}
+                      target='_blank'
+                      rel='noopener noreferrer'
                       className="flex items-center space-x-4 p-3 rounded-lg hover:bg-muted/50 transition-colors group"
                     >
                       <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center group-hover:bg-accent/10 transition-colors">
