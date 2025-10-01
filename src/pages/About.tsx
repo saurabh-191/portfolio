@@ -1,5 +1,6 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import VideoPlayer from '@/components/VideoPlayer';
 
 const About = () => {
   const skills = [
@@ -35,6 +36,24 @@ const About = () => {
             Get to know the person behind the code
           </p>
         </div>
+
+        {/* Intro Video */}
+        <section className="space-y-8">
+          <h2 className="text-4xl font-black text-center gradient-text">Introduction Video</h2>
+          <div className="project-card group">
+            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 p-1">
+              <div className="relative rounded-xl overflow-hidden bg-background/50 backdrop-blur-sm">
+                <VideoPlayer
+                  src="/intro-video.mp4"
+                  poster="/placeholder.svg"
+                />
+              </div>
+            </div>
+            <p className="text-center text-muted-foreground mt-4">
+              Watch my introduction to learn more about my journey and passion for development
+            </p>
+          </div>
+        </section>
 
         {/* Personal Story */}
         <section className="space-y-8">
@@ -75,7 +94,7 @@ const About = () => {
                 <span
                   key={index}
                   className="skill-badge"
-                  style={{animationDelay: `${index * 0.1}s`}}
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {skill}
                 </span>
@@ -91,9 +110,9 @@ const About = () => {
             {achievements.map((achievement, index) => (
               <Card key={index} className="project-card text-center">
                 <div className="space-y-4">
-                <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto">
-                  <span className="text-2xl">🏆</span>
-                </div>
+                  <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto">
+                    <span className="text-2xl">🏆</span>
+                  </div>
                   <div className="space-y-2">
                     <h3 className="font-semibold text-lg">{achievement.title}</h3>
                     <p className="text-muted-foreground font-medium">{achievement.year}</p>
