@@ -2,29 +2,31 @@ name: React Vite CI/CD
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, develop ]
+    branches: [ main ]
 
 jobs:
-  lint-and-build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
         with:
-          node-version: 18
-          cache: 'npm'
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Build Docker image
+        run: docker build -t ghcr.io/${{ github.repository }}/vite-app:latest .
 
-      - name: Lint
-        run: npm run lint || true
+      - name: Push Docker image
+        run: docker push ghcr.io/${{ github.repository }}/vite-app:latest
 
-      - name: Build
-        run: npm run build
+      - name: Trigger Render Deploy
+        run: |
+          curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
