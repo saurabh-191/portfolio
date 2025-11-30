@@ -56,6 +56,7 @@ const BlogPost = () => {
 
   // Update SEO meta tags
   useEffect(() => {
+    if (!post) return; // ✅ guard inside the hook
     document.title = `${post.seo.metaTitle} - Saurabh Singh Portfolio`;
     
     // Meta description
